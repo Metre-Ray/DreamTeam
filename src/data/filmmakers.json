@@ -1,0 +1,50 @@
+{
+    "rus": {
+        "Author1": {
+            "photo": "",
+            "biography": {
+                "date1": "",
+                "date2": ""
+            },
+            "list_of_movies": [],
+            "photo_gallery": [],
+            "link_to_video": "",
+            "place_of_working": ""
+        },
+        "Author2": {
+            "photo": "",
+            "biography": {
+                "date1": "",
+                "date2": ""
+            },
+            "list_of_movies": [],
+            "photo_gallery": [],
+            "link_to_video": "",
+            "place_of_working": ""
+        }
+    },
+    "en": {
+        "Author1": {
+            "photo": "",
+            "biography": {
+                "date1": "",
+                "date2": ""
+            },
+            "list_of_movies": [],
+            "photo_gallery": [],
+            "link_to_video": "",
+            "place_of_working": ""
+        },
+        "Author2": {
+            "photo": "",
+            "biography": {
+                "date1": "",
+                "date2": ""
+            },
+            "list_of_movies": [],
+            "photo_gallery": [],
+            "link_to_video": "",
+            "place_of_working": ""
+        }
+    }
+}
