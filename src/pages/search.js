@@ -28,6 +28,7 @@ document.querySelector('.search').onclick = function(){
             output = '<li>Совпадений не найдено =(</li>';
         }
         document.querySelector("ul").innerHTML = output;
+        console.log(output);
     }
 };
 xhttp.open("GET", "../data/filmmakers.json", true);
