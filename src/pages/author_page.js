@@ -1,66 +1,86 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import authorObject from '../data/filmmakers.json';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
-// import './tableStyle.css';
 import ModalVideo from 'react-modal-video';
 import ReactPlayer from 'react-player';
 import { Player } from 'video-react';
 import './author_page.css';
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
+import L from 'leaflet';
+
+// pk.eyJ1IjoibWV0cmVyYXkiLCJhIjoiY2pyZG10ejJtMGg2dTQ5cWtuOWtsbWs4ZiJ9.vPmo1y2-ocH20LSe77hbZg
 
 
 class MyModalVideo extends React.Component {
 
-  constructor () {
-    super()
-    this.state = {
-      isOpen: false
+    constructor () {
+        super()
+        this.state = {
+        isOpen: false
+        }
+        this.openModal = this.openModal.bind(this)
     }
-    this.openModal = this.openModal.bind(this)
-  }
 
-  openModal () {
-    this.setState({isOpen: true})
-  }
+    openModal () {
+        this.setState({isOpen: true})
+    }
 
-  render () {
-    return (
-      <div>
-        <ModalVideo channel='youtube' isOpen={this.state.isOpen} src="https://www.youtube.com/" videoId='' onClose={() => this.setState({isOpen: false})} />
-        <button onClick={this.openModal}>Open</button>
-      </div>
-    )
-  }
+    render () {
+        return (
+        <div>
+            <ModalVideo channel='youtube' isOpen={this.state.isOpen} src="https://www.youtube.com/" videoId='' onClose={() => this.setState({isOpen: false})} />
+            <button onClick={this.openModal}>Open</button>
+        </div>
+        )
+    }
 }
 
 
-class MyGallery extends React.Component {
+class ModalV extends React.Component {
 
-    render() {
-  
-      const images = [
-        {
-          original: '../img/pict1.jpg',
-          thumbnail: '../img/pict1.jpg',
-        },
-        {
-          original: 'http://lorempixel.com/1000/600/nature/2/',
-          thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-        },
-        {
-          original: 'http://lorempixel.com/1000/600/nature/3/',
-          thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-        }
-      ]
-  
-      return (
-        <ImageGallery items={images} />
-      );
+    constructor(props) {
+        super(props);
+        this.name = "Виктор Тимофеевич Туров"; //sessionStorage.getItem('filmmakerName');
+        this.lang = "rus";
+        this.state = {
+            isOpen: false
+        };
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
-  
+
+    openModal () {
+        this.setState({isOpen: true})
+    }
+
+    closeModal() {
+        this.setState({isOpen: false});
+    }
+
+
+    render () {
+        const modal = <div className="modal-window" onClick={this.closeModal}>
+                <div className="modal-content">
+                    <ReactPlayer url={authorObject[this.lang][this.name].link_to_video} />
+                </div>
+            </div>;
+        if (this.state.isOpen === true)
+            return (
+                <Fragment>
+                    {modal}
+                    <button onClick={this.openModal}>Open</button>
+                </Fragment>
+            );
+        else
+            return (
+                <Fragment>
+                    <button onClick={this.openModal}>Open</button>
+                </Fragment>
+            )
+    }
 }
 
 class App extends React.Component {
@@ -68,14 +88,19 @@ class App extends React.Component {
         super(props);
         this.name = "Виктор Тимофеевич Туров"; //sessionStorage.getItem('filmmakerName');
         this.lang = "rus";
-        // this.state = {
-        //     selectedOption: {label: prevOption, value: prevOption}
-        // }
-        // this.options = Object.keys(dataObject.mentors).map((mentor) => {
-        //     return {label: mentor, value: mentor};
-        // });
-        // this.handleChange = this.handleChange.bind(this);
     }
+
+    // componentDidMount() {
+    //     const mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    //     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    //         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    //         maxZoom: 14,
+    //         id: 'mapbox.streets',
+    //         accessToken: 'pk.eyJ1IjoibWV0cmVyYXkiLCJhIjoiY2pyZG10ejJtMGg2dTQ5cWtuOWtsbWs4ZiJ9.vPmo1y2-ocH20LSe77hbZg'
+    //     }).addTo(mymap);
+    //     document.querySelector('#mapid').style.display = 'block';
+    //     // mymap.invalidateSize();
+    // }
 
     async defineGeoCoords(place) {
         const provider = new OpenStreetMapProvider();
@@ -84,14 +109,7 @@ class App extends React.Component {
         return results[0];
     }
 
-    handleChange(selectedOption) {
-        this.setState({ selectedOption });
-        localStorage.setItem('mentorDashboardGithub', selectedOption.label);
-        console.log(`Option selected:`, selectedOption);
-    }
-
     render() {
-        // const { selectedOption } = this.state;
         const imgsrc = `../img/${authorObject[this.lang][this.name].photo}`;
         const images = [];
         this.defineGeoCoords();
@@ -131,20 +149,19 @@ class App extends React.Component {
                             images.push({original: addr, thumbnail: addr});
                         })
                     }
-                    {/* <MyGallery /> */}
                     <ImageGallery items={images} />
                 </section>
                 <section className="video">
-                    <ReactPlayer url={authorObject[this.lang][this.name].link_to_video} />
+                    <ModalV />
                     {/* <Player
                         playsInline
                         poster="/assets/poster.png"
                         src={authorObject[this.lang][this.name].link_to_video}
                     /> */}
                 </section>
-                <section className="map">
+                <section className="mapp">
                     <div id="mapid"></div>
-                leaflet
+                    MAAAAAAAAAP
                 </section>
             </Fragment>
         );
