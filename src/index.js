@@ -10,14 +10,14 @@ import DailyArticle from './components/DailyArticle.jsx';
 import AboutPortal from './components/AboutPortal.jsx';
 import DevTeam from './components/DevTeam.jsx';
 
-import style from './css/style.css';
+import './css/index.css';
 
 class IndexPage extends React.Component {
   render() {
     return [
       <Header/>,
       <Main>
-        <section class='container'>
+        <section className='container'>
           <Nav isHomeActive='active'/>
           <DailyArticle/>
           <AboutPortal/>

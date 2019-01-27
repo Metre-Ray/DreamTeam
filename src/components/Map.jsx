@@ -1,9 +1,10 @@
 import React from 'react';
 import L from 'leaflet';
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
+import 'babel-polyfill';
 
 
-export default class Mapp extends React.Component {
+export default class Map extends React.Component {
     componentDidMount() {
         this.makeMap();
     }

@@ -1,10 +1,10 @@
 const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
     index: './src/index.js',
+    mihail: './src/js/mihail.js',
   },
   output: {
     filename: 'js/[name].js',
@@ -20,38 +20,24 @@ module.exports = {
         }
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: { minimize: true }
-          }
-        ]
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-            loader: 'file-loader',
-            options: {
-                name: '[name].[ext]',
-                outputPath: 'fonts/'
-            }
-        }]
-      },
-      {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" }
+        ]
       }
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./html/index.html"
+    new HtmlWebpackPlugin({
+        template: './src/index.html',
+        inject: false,
+        filename: './html/index.html'
     }),
-    new MiniCssExtractPlugin({
-      filename: "css/[name].css",
-      chunkFilename: "[name].css"
-    })
+    new HtmlWebpackPlugin({
+      template: './src/pages/authors/Mihail.html',
+      inject: false,
+      filename: './html/authors/Mihail.html'
+  })
   ]
 };

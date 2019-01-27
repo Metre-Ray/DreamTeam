@@ -1,5 +1,7 @@
-.sooon{
-    display: none;
+@media screen and (max-width: 1100px) {
+    .cross{
+        display: none;
+    }
 }
 
 body{

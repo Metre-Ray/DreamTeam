@@ -1,15 +1,16 @@
 import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom';
+
 import authorObject from '../data/filmmakers.json';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import ImageGallery from 'react-image-gallery';
-import "react-image-gallery/styles/css/image-gallery.css";
-import './author_page.css';
-import OverlayVideo from '../components/overlayVideo';
-import Mapp from '../components/Map';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import OverlayVideo from './overlayVideo.jsx';
+import Map from './Map.jsx';
+
+import '../css/author_page.css';
 
 
-class AuthorPage extends React.Component {
+class Author extends React.Component {
     constructor(props) {
         super(props);
         this.name = "Дашук"; //sessionStorage.getItem('filmmakerName');
@@ -65,11 +66,11 @@ class AuthorPage extends React.Component {
                 </section>
                 <section className="map">
                     <p>Место работы автора: </p>
-                    <Mapp place={authorObject[this.lang][this.name].place_of_working} />
+                    <Map place={authorObject[this.lang][this.name].place_of_working} />
                 </section>
             </Fragment>
         );
     }
 }
 
-ReactDOM.render(<AuthorPage />, document.querySelector('main'));
+export default Author;

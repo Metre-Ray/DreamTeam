@@ -5,7 +5,7 @@ class Footer extends React.Component {
         return (
             <footer>
                 <div className="container">
-                    <div classNames="logo">Team35</div>
+                    <div className="logo">Team35</div>
                 </div>
             </footer>
         );
