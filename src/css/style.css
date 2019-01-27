@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'AngryBirds';
-    src: url('ABfont.otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .sooon{
     display: none;
 }
@@ -39,7 +32,7 @@ header .container{
 
 
 .logo{
-    font-family: AngryBirds;
+    font-family: Arial;
     font-size: 40px;
     font-weight: normal;
 }
@@ -179,8 +172,8 @@ nav .submenu{
     flex-wrap: wrap;
 }
 
-.team-block{
-    font-family: AngryBirds;
+.team-block {
+    font-family: Arial;
     margin-bottom: 2%;
     width: 150px;
     height: 200px;
@@ -190,6 +183,11 @@ nav .submenu{
     flex-direction: column;
     align-items: center;
     transition: all 0.2s;
+}
+
+.team-block:after {
+    content: "*";
+    left: 200%;
 }
 
 .team-block:hover{
@@ -209,6 +207,7 @@ nav .submenu{
     width: 100%;
     height: auto;
 }
+
 footer{
     border-top: 2px solid white;
     height: 100px;
