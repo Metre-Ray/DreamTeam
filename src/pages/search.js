@@ -59,8 +59,8 @@ document.querySelector('.search').onclick = function(){
                 matchs.push(key);
             }
         }
-        console.log(matchs);
         matchs.forEach((el)=>{output +='<li><a href=\'#\'>'+ obj[el].name +'</a></li>'});  // добавить генерацию ссылки на режиссера
+        
         if(matchs.length == 0){
             switch (sessionStorage.getItem('language')) {
                 case "rus":
