@@ -39,7 +39,7 @@ section {
 }
 
 .video {
-    margin: 50px auto;
+    margin: 80px auto;
 }
 
 .modal-window {
@@ -62,14 +62,14 @@ section {
     margin: 30px auto;
     padding: 15px;
     border-radius: 5px;
-    background-color: rgb(255, 224, 180);
+    background-color: rgb(187, 214, 255);
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s;
 }
 
 .video-button:hover {
-    background-color: rgb(255, 204, 128);
+    background-color: rgb(128, 172, 255);
 }
 
 

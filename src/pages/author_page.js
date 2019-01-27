@@ -13,7 +13,7 @@ class AuthorPage extends React.Component {
     constructor(props) {
         super(props);
         this.name = "Дашук"; //sessionStorage.getItem('filmmakerName');
-        this.lang = "rus";  //sessionStorage.getItem('language');
+        this.lang = sessionStorage.getItem('language') || "rus";
     }
 
     render() {
