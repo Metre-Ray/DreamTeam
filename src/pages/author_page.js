@@ -14,7 +14,6 @@ class AuthorPage extends React.Component {
         super(props);
         this.name = "Дашук"; //sessionStorage.getItem('filmmakerName');
         this.lang = "rus";  //sessionStorage.getItem('language');
-        console.log(authorObject[this.lang][this.name]);
     }
 
     render() {

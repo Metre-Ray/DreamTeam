@@ -11,6 +11,27 @@ section {
     max-height: 500px;
 }
 
+.list-movies ul {
+    list-style-type: none;
+}
+
+.list-movies ul li {
+    position: relative;
+    padding: .4em;
+}
+
+.list-movies ul li::before {
+    content: ' ';
+    position: absolute; 
+    height: 1em;
+    width: 1em;
+    left: -1.3em;
+    top: 0%;
+    border: .3em solid #fff;
+    border-radius: 2em;
+    background: #87ceeb;
+}
+
 .gallery {
     max-width: 600px;
     max-height: 600px;
