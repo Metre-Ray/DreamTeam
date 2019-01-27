@@ -27,7 +27,6 @@ class AuthorPage extends React.Component {
                     <p><img src={imgsrc} alt="filmmaker's photo"></img></p>
                 </section>
                 <section className="time-line">
-                    <p>Фотогалерея</p>
                     <Timeline lineColor={'#ddd'}>
                         {   
                             Object.keys(authorObject[this.lang][this.name].biography).sort().map((date) => 
@@ -53,6 +52,7 @@ class AuthorPage extends React.Component {
                     </ul>
                 </section>
                 <section className="gallery">
+                    <p>Фотогалерея</p>
                     {   
                         authorObject[this.lang][this.name].photo_gallery.map(picture => {
                             let addr = `../img/${picture}`;

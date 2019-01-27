@@ -7,6 +7,10 @@ section {
     text-align: center;
 }
 
+.top img {
+    max-height: 500px;
+}
+
 .gallery {
     max-width: 600px;
     max-height: 600px;
