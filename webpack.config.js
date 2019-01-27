@@ -5,6 +5,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     mihail: './src/js/mihail.js',
+    searchLogic: './src/js/search.js',
+    searchPage: './src/js/searchPage.js'
   },
   output: {
     filename: 'js/[name].js',
@@ -38,6 +40,11 @@ module.exports = {
       template: './src/pages/authors/Mihail.html',
       inject: false,
       filename: './html/authors/Mihail.html'
-  })
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/search.html',
+      inject: false,
+      filename: './html/search.html'
+    })
   ]
 };

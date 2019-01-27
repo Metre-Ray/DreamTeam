@@ -6,10 +6,7 @@ class Header extends React.Component {
             <header>
                 <div className="container">
                     <div className="logo">Team35</div>
-                    <div className="search">
-                        <label id="search-label" htmlFor="search-input">Search:</label>
-                        <input type="text" id="search-input"/>
-                    </div>
+                    <a href="/search.html" className="search">search</a>
                 </div>
             </header>
         );
