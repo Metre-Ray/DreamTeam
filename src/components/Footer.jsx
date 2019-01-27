@@ -5,12 +5,12 @@ class Footer extends React.Component {
         return (
             <footer>
                 <div className="container">
-                        <div class="logo">Team35</div>
-                <div class="footer-text">
+                        <div className="logo">Team35</div>
+                <div className="footer-text">
                     <p>All rights are right. All lefts are left.</p>
                 </div>
                 <div >
-                    <img class="rss-logo" src="https://rollingscopes.com/images/logo_rs_text.svg" alt="RSS"/>
+                    <img className="rss-logo" src="https://rollingscopes.com/images/logo_rs_text.svg" alt="RSS"/>
                 </div>
                 </div>
             </footer>

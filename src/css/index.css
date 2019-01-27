@@ -211,8 +211,22 @@ nav .submenu{
 }
 
 footer{
-    border-top: 2px solid white;
     height: 100px;
+    border-top: 2px solid white;
     background: #424242;
     color: #e5e5e5;
+}
+
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer .footer-text{
+    font-size: 10px;
+    color: black;
+    align-self: flex-end;
 }
