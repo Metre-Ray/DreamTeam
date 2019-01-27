@@ -1,0 +1,37 @@
+{
+    "rus": {
+        "search-label": 'Поиск:',
+        "home-button": 'Главная',
+        "filmmakers-button": 'Режиссеры',
+        "search-button": 'Поиск',
+        "language-button": 'Язык',
+        "daily-article-header": 'Статья Дня',
+        "about-us-header": 'О нас',
+        "about-us-text": 'Это наш мини-портал о белорусских режиссерах. Здесь вы можете почитать про белорусских режиссеров, их историю и фильмографию. Этот портал был сделан Командой №35 в качестве CodeJam задачи, в рамках обучения в Rolling Scopes School',
+        "dev-team-header": 'Наша замечательная команда'
+    },
+    eng: {
+        "search-label": 'Search:',
+        "home-button": 'Home',
+        "filmmakers-button": 'filmmakers',
+        "search-button": 'Search',
+        "language-button": 'Language',
+        "daily-article-header": 'Daily Article',
+        "about-us-header": 'About us',
+        "about-us-text": 'This is our little portal about belarussian filmmakers. There you can read some about belarussian filmmakers, their history and filmography. It has been made by team 35 for Code Jam task at Rolling Scopes School.',
+        "dev-team-header": 'Our great team'
+        
+    },
+    bel: {
+        "search-label": 'Пошук:',
+        "home-button": 'Галоўная',
+        "filmmakers-button": 'Рэжысёры',
+        "search-button": 'Пошук',
+        "language-button": 'Мова',
+        "daily-article-header": 'Артыкул дня',
+        "about-us-header": 'Пра нас',
+        "about-us-text": 'Гэта наш міні-партал пра беларускіх рэжысёраў. Тут вы можаце пачытаць пра беларускіх рэжысёраў, іх гісторыю і фільмаграфію. Гэты партал быў зроблены Камандай №35 у якасці CodeJam задачы, у рамках навучання ў Rolling Scopes School',
+        "dev-team-header": 'Наша выдатная каманда'
+        
+    }
+}
