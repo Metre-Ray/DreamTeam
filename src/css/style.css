@@ -126,7 +126,7 @@ nav .submenu{
     border-top: 2px dashed gray;
 }
 
-.about-us{
+.about-portal{
     border-top: 2px solid red;
     height: 40vh;
     display: flex;
@@ -183,11 +183,6 @@ nav .submenu{
     flex-direction: column;
     align-items: center;
     transition: all 0.2s;
-}
-
-.team-block:after {
-    content: "*";
-    left: 200%;
 }
 
 .team-block:hover{

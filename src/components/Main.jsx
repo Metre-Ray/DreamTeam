@@ -1,12 +1,10 @@
 import React from 'react';
 
-import Nav from './Nav.jsx';
-
 class Main extends React.Component {
     render() {
         return(
             <main>
-                <Nav isHomeActive='active'></Nav>
+                {this.props.children}
             </main>
         );
     }
