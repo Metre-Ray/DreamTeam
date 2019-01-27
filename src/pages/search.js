@@ -1,4 +1,4 @@
-//sessionStorage.setItem('language', 'rus'); // проверка работы разных языков
+// sessionStorage.setItem('language', 'eng'); // проверка работы разных языков
 var textPlaseholder = '';
 var textButton = '';
 
@@ -55,7 +55,7 @@ document.querySelector('.search').onclick = function(){
         var matchs =[];
 
         for(key in obj){
-            if(key.search(myExp) != -1){
+            if((key.search(myExp) != -1) || (obj[key].place_of_working.search(myExp) != -1)){
                 matchs.push(key);
             }
         }
