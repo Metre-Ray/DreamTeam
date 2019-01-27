@@ -20,8 +20,6 @@ class Authors extends React.Component {
       authors.push(authorObj);
     }
 
-    console.log(authors);
-
     authorsElems = authors.map((item, index) => {
       return <AuthorDescription name={item.name} photo={item.photo} listOfMovies={item.listOfMovies}/>
     });

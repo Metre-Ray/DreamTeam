@@ -2,11 +2,15 @@ import React from 'react';
 
 import Developer from './Developer.jsx';
 
+const UIText = require('../data/user-interface.json');
+
 class DevTeam extends React.Component {
     render() {
+        let lang = 'rus';
+
         return(
             <section className="dev-team">
-                <h2 className="dev-team-header">Our great team</h2>
+                <h2 className="dev-team-header">{UIText[lang]['dev-team-header']}</h2>
                 <div className="team-links">
                     <Developer gh='metre-ray' avatar='https://avatars1.githubusercontent.com/u/26404831'/>
                     <div className="cross"></div>

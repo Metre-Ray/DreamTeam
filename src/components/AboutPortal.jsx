@@ -1,12 +1,15 @@
 import React from 'react';
 
+const UIText = require('../data/user-interface.json');
+
 class AboutPortal extends React.Component {
     render() {
+        let lang = 'rus';
+
         return (
             <section className="about-portal">
-                <h2 className="about-portal-header">About us</h2>
-                <p className="about-portal-text">
-                    This is our little portal about belarussian filmmakers. There you can read some about belarussian filmmakers, their history and filmography. It has been made by team 35 for Code Jam task at Rolling Scopes School.</p>
+                <h2 className="about-portal-header">{UIText[lang]['about-us-header']}</h2>
+                <p className="about-portal-text">{UIText[lang]['about-us-text']}</p>
             </section>
         );
     }

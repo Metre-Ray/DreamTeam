@@ -1,10 +1,14 @@
 import React from 'react';
 
+const UIText = require('../data/user-interface.json');
+
 class DailyArticle extends React.Component {
     render() {
+        let lang = 'rus';
+
         return(
             <section className="daily-article">
-                <h2 className="daily-article-header">Daily Article</h2>
+                <h2 className="daily-article-header">{UIText[lang]['daily-article-header']}</h2>
                 <article id="filmmaker">
                     <div className="filmmaker-main">
                         <div className="filmmaker-info">
