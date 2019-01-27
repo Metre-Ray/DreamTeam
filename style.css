@@ -1,12 +1,14 @@
+@media screen and (max-width: 1100px){
+    .cross{
+        display: none;
+    }
+}
+
 @font-face {
     font-family: 'AngryBirds';
     src: url('ABfont.otf');
     font-weight: normal;
     font-style: normal;
-}
-
-.sooon{
-    display: none;
 }
 
 body{
@@ -42,6 +44,7 @@ header .container{
     font-family: AngryBirds;
     font-size: 40px;
     font-weight: normal;
+    display: block;
 }
 
 nav {
@@ -72,7 +75,7 @@ nav li a {
     padding: 0 25px;
     display: inline-block;
     line-height: inherit;
-    
+    transition: all 0.2s;
 }
 
 nav li a:hover {
@@ -209,9 +212,30 @@ nav .submenu{
     width: 100%;
     height: auto;
 }
+
+.rss-logo{
+    height: 70px;
+    width: auto;
+    
+}
 footer{
-    border-top: 2px solid white;
     height: 100px;
+    border-top: 2px solid white;
     background: #424242;
     color: #e5e5e5;
 }
+
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer .footer-text{
+    font-size: 10px;
+    color: black;
+    align-self: flex-end;
+}
+
