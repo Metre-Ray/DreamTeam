@@ -1,5 +1,35 @@
-document.querySelector('.search').onclick = function(){
-    sessionStorage.setItem('language','eng');
+//sessionStorage.setItem('language', 'rus'); // проверка работы разных языков
+var textPlaseholder = '';
+var textButton = '';
+
+switch (sessionStorage.getItem('language')) {
+    case "rus":
+        textPlaseholder = 'поиск';
+        textButton = 'ИСКАТЬ!';
+        break;
+    case "eng":
+        textPlaseholder = 'search';
+        textButton = 'SEARCH!';
+        break;
+    case "by":
+        textPlaseholder = 'пошук';        
+        textButton = 'ШУКАЦЬ!';
+        break;
+    default:
+        textPlaseholder = 'поиск';
+        textButton = 'ИСКАТЬ!';
+        break;
+  } 
+
+window.onload = function (){
+    var el = document.querySelector('.input');
+    el.placeholder=textPlaseholder;
+    var button = document.querySelector('.search');
+    button.value = textButton;
+     };
+
+
+document.querySelector('.search').onclick = function(){    
     var ul = document.querySelector("ul");
     var searchfield = document.querySelector('.input').value;
     console.log(sessionStorage.getItem('language'));
@@ -12,7 +42,10 @@ document.querySelector('.search').onclick = function(){
         if (this.readyState == 4 && this.status == 200) {
 
            if(sessionStorage.getItem('language') == undefined) //проверка языка страницы
-                {sessionStorage.setItem('language','rus');}
+            {
+                sessionStorage.setItem('language','rus');
+
+            }
 
         var response = JSON.parse(xhttp.responseText);
         var output = '';
@@ -26,20 +59,21 @@ document.querySelector('.search').onclick = function(){
                 matchs.push(key);
             }
         }
-        matchs.forEach((el)=>{output +='<li><a href=\'#\'>'+ obj[el].name +'</a></li>'});      
+        console.log(matchs);
+        matchs.forEach((el)=>{output +='<li><a href=\'#\'>'+ obj[el].name +'</a></li>'});  // добавить генерацию ссылки на режиссера
         if(matchs.length == 0){
             switch (sessionStorage.getItem('language')) {
                 case "rus":
-                    output = '<li>Совпадений не найдено =(</li>';;
+                    output = '<li>Совпадений не найдено =(</li>';
                     break;
                 case "eng":
-                    output = '<li>No match found =(</li>';;
+                    output = '<li>No match found =(</li>';
                     break;
                 case "by":
-                    output = '<li>Супадзенняў не знойдзена =(</li>';;
+                    output = '<li>Супадзенняў не знойдзена =(</li>';
                     break;
                 default:
-                    output = '<li>Совпадений не найдено =(</li>';;
+                    output = '<li>Совпадений не найдено =(</li>';
                     break;
               } 
             
