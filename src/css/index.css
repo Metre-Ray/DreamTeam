@@ -205,6 +205,11 @@ nav .submenu{
     height: auto;
 }
 
+.rss-logo{
+    height: 60px;
+    width: auto;   
+}
+
 footer{
     border-top: 2px solid white;
     height: 100px;
