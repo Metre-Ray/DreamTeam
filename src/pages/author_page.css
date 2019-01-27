@@ -47,6 +47,17 @@ section {
     background-color: rgb(255, 204, 128);
 }
 
+
+/* .image-gallery-image {
+    height: 350px;
+    object-fit: contain;
+} */
+
+.gallery .image-gallery-slide img {
+    max-height: 350px;
+    /* width: auto; */
+}
+
 #mapid { 
     height: 400px; 
     z-index: 1;

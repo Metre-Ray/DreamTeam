@@ -9,12 +9,12 @@ import OverlayVideo from '../components/overlayVideo';
 import Mapp from '../components/Map';
 
 
-
 class AuthorPage extends React.Component {
     constructor(props) {
         super(props);
-        this.name = "Аслюк"; //sessionStorage.getItem('filmmakerName');
+        this.name = "Дашук"; //sessionStorage.getItem('filmmakerName');
         this.lang = "rus";  //sessionStorage.getItem('language');
+        console.log(authorObject[this.lang][this.name]);
     }
 
     render() {
@@ -27,6 +27,7 @@ class AuthorPage extends React.Component {
                     <p><img src={imgsrc} alt="filmmaker's photo"></img></p>
                 </section>
                 <section className="time-line">
+                    <p>Фотогалерея</p>
                     <Timeline lineColor={'#ddd'}>
                         {   
                             Object.keys(authorObject[this.lang][this.name].biography).sort().map((date) => 
@@ -55,7 +56,7 @@ class AuthorPage extends React.Component {
                     {   
                         authorObject[this.lang][this.name].photo_gallery.map(picture => {
                             let addr = `../img/${picture}`;
-                            images.push({original: addr, thumbnail: addr});
+                            images.push({original: addr, thumbnail: addr, originalClass: 'featured-slide'});
                         })
                     }
                     <ImageGallery items={images} />

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import L from 'leaflet';
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
 
