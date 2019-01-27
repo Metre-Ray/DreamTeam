@@ -1,8 +1,8 @@
 document.querySelector('.search').onclick = function(){
-
+    sessionStorage.setItem('language','eng');
     var ul = document.querySelector("ul");
     var searchfield = document.querySelector('.input').value;
-
+    console.log(sessionStorage.getItem('language'));
     // var myExp = new RegExp(searchfield, 'i'); //любое совпадение
     var myExp = new RegExp('^'+searchfield, 'i'); // совпадение по первым буквам
     var xhttp = new XMLHttpRequest();
@@ -17,6 +17,7 @@ document.querySelector('.search').onclick = function(){
         var response = JSON.parse(xhttp.responseText);
         var output = '';
         var lang = sessionStorage.getItem('language');
+
         var obj = response[lang];
         var matchs =[];
 
@@ -27,7 +28,21 @@ document.querySelector('.search').onclick = function(){
         }
         matchs.forEach((el)=>{output +='<li><a href=\'#\'>'+ obj[el].name +'</a></li>'});      
         if(matchs.length == 0){
-            output = '<li>Совпадений не найдено =(</li>';
+            switch (sessionStorage.getItem('language')) {
+                case "rus":
+                    output = '<li>Совпадений не найдено =(</li>';;
+                    break;
+                case "eng":
+                    output = '<li>No match found =(</li>';;
+                    break;
+                case "by":
+                    output = '<li>Супадзенняў не знойдзена =(</li>';;
+                    break;
+                default:
+                    output = '<li>Совпадений не найдено =(</li>';;
+                    break;
+              } 
+            
         }
         document.querySelector("ul").innerHTML = output;        
     }
