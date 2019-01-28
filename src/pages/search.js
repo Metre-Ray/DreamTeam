@@ -59,8 +59,8 @@ document.querySelector('.search').onclick = function(){
                 matchs.push(key);
             }
         }
-        matchs.forEach((el)=>{output +='<li><a href=\'#\'>'+ obj[el].name +'</a></li>'});  // добавить генерацию ссылки на режиссера
-        
+        matchs.forEach((el)=>{output +='<li><a href=\'https://metre-ray.github.io/DreamTeam/html/authors/'+ el +'.html\'>'+ obj[el].name +'</a></li>'});  
+        console.log(matchs);
         if(matchs.length == 0){
             switch (sessionStorage.getItem('language')) {
                 case "rus":
