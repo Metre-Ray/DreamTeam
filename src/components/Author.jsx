@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 
 import authorObject from '../data/filmmakers.json';
+import nameObject from '../data/names.json';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
@@ -13,8 +14,8 @@ import '../css/author_page.css';
 class Author extends React.Component {
     constructor(props) {
         super(props);
-        this.name = "Дашук"; //sessionStorage.getItem('filmmakerName');
-        this.lang = "rus";  //sessionStorage.getItem('language');
+        this.lang = sessionStorage.getItem('language') || 'rus';
+        this.name = (this.lang === 'eng') ? props.name : (this.lang === 'by') ? nameObject[props.name]["by"] : nameObject[props.name]["rus"]; //sessionStorage.getItem('filmmakerName');
     }
 
     render() {

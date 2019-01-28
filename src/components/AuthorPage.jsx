@@ -8,12 +8,17 @@ import Footer from './../components/Footer.jsx';
 import Author from './../components/Author.jsx';
 
 class AuthorPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+
   render() {
     return [
       <Header/>,
       <Main>
         <section class='container'>
-          <Author/>
+          <Author name={this.props.name}/>
         </section>
       </Main>,
       <Footer/>

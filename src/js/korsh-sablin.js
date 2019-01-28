@@ -5,6 +5,6 @@ import AuthorPage from '../components/AuthorPage.jsx';
 import '../css/index.css';
 
 ReactDOM.render(
-  <AuthorPage name="Dashuk"/>,
+  <AuthorPage name="Korsh-Sablin"/>,
   document.body
 );
