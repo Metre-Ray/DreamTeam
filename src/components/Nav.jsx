@@ -9,8 +9,8 @@ class Nav extends React.Component {
         return(
             <nav>
                 <ul>
-                    <li><a href="/html/index.html" className={"home-button" + this.props.isHomeActive}>{UIText[lang]['home-button']}</a></li>
-                    <li><a href="/html/authors/authors.html" className={"filmmakers-button" + this.props.isFilmmakersActive}>{UIText[lang]['filmmakers-button']}</a></li>
+                    <li><a href="./index.html" className={"home-button" + this.props.isHomeActive}>{UIText[lang]['home-button']}</a></li>
+                    <li><a href="./authors/authors.html" className={"filmmakers-button" + this.props.isFilmmakersActive}>{UIText[lang]['filmmakers-button']}</a></li>
                     <li><a href="#" className={"language-button" + this.props.isLanguageActive}>{UIText[lang]['language-button']}</a>
                         <ul className="submenu">
                             <li id="eng">eng</li>

@@ -15,11 +15,11 @@ class Author extends React.Component {
     constructor(props) {
         super(props);
         this.lang = sessionStorage.getItem('language') || 'rus';
-        this.name = (this.lang === 'eng') ? props.name : (this.lang === 'by') ? nameObject[props.name]["by"] : nameObject[props.name]["rus"]; //sessionStorage.getItem('filmmakerName');
+        this.name = props.name; //(this.lang === 'eng') ? props.name : (this.lang === 'by') ? nameObject[props.name]["by"] : nameObject[props.name]["rus"]; //sessionStorage.getItem('filmmakerName');
     }
 
     render() {
-        const imgsrc = `../img/${authorObject[this.lang][this.name].photo}`;
+        const imgsrc = `../../img/${authorObject[this.lang][this.name].photo}`;
         const images = [];
         return (
             <Fragment>
@@ -56,7 +56,7 @@ class Author extends React.Component {
                     <p>Фотогалерея</p>
                     {   
                         authorObject[this.lang][this.name].photo_gallery.map(picture => {
-                            let addr = `../img/${picture}`;
+                            let addr = `../../img/${picture}`;
                             images.push({original: addr, thumbnail: addr, originalClass: 'featured-slide'});
                         })
                     }
