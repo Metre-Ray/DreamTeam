@@ -26,6 +26,7 @@ window.onload = function (){
     el.placeholder=textPlaseholder;
     var button = document.querySelector('.search');
     button.value = textButton;
+    document.querySelector('.search').click();
      };
 
 
