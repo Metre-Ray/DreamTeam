@@ -1,6 +1,8 @@
-// sessionStorage.setItem('language', 'eng'); // проверка работы разных языков
 var textPlaseholder = '';
 var textButton = '';
+var submit = document.getElementById('submit');
+
+console.log(submit);
 
 switch (sessionStorage.getItem('language')) {
     case "rus":
@@ -19,17 +21,17 @@ switch (sessionStorage.getItem('language')) {
         textPlaseholder = 'поиск';
         textButton = 'ИСКАТЬ!';
         break;
-  } 
+} 
 
 window.onload = function (){
     var el = document.querySelector('.input');
     el.placeholder=textPlaseholder;
     var button = document.querySelector('.search');
     button.value = textButton;
-     };
+    submit.click();
+};
 
-
-document.querySelector('.search').onclick = function(){    
+function search() {
     var ul = document.querySelector("ul");
     var searchfield = document.querySelector('.input').value;
     console.log(sessionStorage.getItem('language'));
@@ -59,8 +61,8 @@ document.querySelector('.search').onclick = function(){
                 matchs.push(key);
             }
         }
-        matchs.forEach((el)=>{output +='<li><a href=\'https://metre-ray.github.io/DreamTeam/html/authors/'+ el +'.html\'>'+ obj[el].name +'</a></li>'});  
-        console.log(matchs);
+        matchs.forEach((el)=>{output +='<li><a href=\'https://metre-ray.github.io/DreamTeam/html/authors/'+ el +'.html\'>'+ obj[el].name +'</a></li>'}); 
+        
         if(matchs.length == 0){
             switch (sessionStorage.getItem('language')) {
                 case "rus":
@@ -84,3 +86,5 @@ document.querySelector('.search').onclick = function(){
 xhttp.open("GET", "../data/filmmakers.json", true);
 xhttp.send();
 }
+
+submit.addEventListener('click', search, false);
