@@ -4,10 +4,17 @@
     }
 }
 
+/* @font-face {
+    font-family: 'AngryBirds';
+    src: url('../data/ABfont.otf');
+    font-weight: normal;
+    font-style: normal;
+} */
+
 body{
     margin: 0;
     padding: 0;
-    background: #ccc;
+    background: rgb(250, 250, 250);
     font-family: Lato;
 }
 
@@ -17,12 +24,22 @@ body{
     height: 100%;
 }
 
+h1{
+    margin: 10px;
+    /* color: white; */
+}
+
 header{
     font-weight: bold;
     font-size: 16px;
-    background: red;
+    background: rgb(0, 0, 0);
     height: 70px;
     border-bottom: 2px solid white;
+    color: white;
+}
+
+header a{
+    color: white;
 }
 
 header .container{
@@ -32,11 +49,12 @@ header .container{
     align-items: center;
 }
 
-
 .logo{
+    /* font-family: "AngryBirds", Arial; */
     font-family: Arial;
-    font-size: 40px;
+    font-size: 1.5rem;
     font-weight: normal;
+    color: white;
 }
 
 nav {
@@ -44,7 +62,7 @@ nav {
     width: 100%; 
     text-align: center;
     line-height: 50px;
-    background: #ddd;
+    background: rgb(255, 35, 35);
 }
 
 nav ul {
@@ -67,7 +85,6 @@ nav li a {
     padding: 0 25px;
     display: inline-block;
     line-height: inherit;
-    
 }
 
 nav li a:hover {
@@ -77,11 +94,18 @@ nav li a:hover {
 }
 
 nav .submenu{
-    display: none;
-    position: absolute;
+    /* display: inline; */
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    /* position: absolute; */
     list-style: none;
     border: 1px solid black;
+}
 
+nav .submenu li {
+    margin-right: 4px;
+    cursor: pointer;
 }
 
 
@@ -111,6 +135,7 @@ nav .submenu{
 
 .filmmaker-info{   
     width: 50%;
+    /* height: fit-content; */
     border-right: 2px dashed gray;
 }
 
@@ -227,6 +252,6 @@ footer .container{
 
 footer .footer-text{
     font-size: 10px;
-    color: black;
+    color: white;
     align-self: flex-end;
 }

@@ -9,6 +9,7 @@ section {
 
 .top img {
     max-height: 500px;
+    max-width: 100%;
 }
 
 .list-movies ul {
@@ -23,11 +24,11 @@ section {
 .list-movies ul li::before {
     content: ' ';
     position: absolute; 
-    height: 1em;
-    width: 1em;
+    height: 0.8em;
+    width: 0.8em;
     left: -1.3em;
-    top: 0%;
-    border: .3em solid #fff;
+    top: 0.2em;
+    border: .2em solid #fff;
     border-radius: 2em;
     background: #87ceeb;
 }
@@ -73,14 +74,17 @@ section {
 }
 
 
-/* .image-gallery-image {
-    height: 350px;
-    object-fit: contain;
-} */
+.image-gallery-image {
+    /* height: 350px; */
+    /* object-fit: contain; */
+    text-align: center;
+}
 
 .gallery .image-gallery-slide img {
     max-height: 350px;
-    /* width: auto; */
+    max-width: 100%;
+    width: min-content;
+    /* margin: 0 auto; */
 }
 
 #mapid { 

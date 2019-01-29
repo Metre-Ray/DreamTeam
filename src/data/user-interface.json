@@ -13,7 +13,7 @@
     "eng": {
         "search-label": "Search:",
         "home-button": "Home",
-        "filmmakers-button": "filmmakers",
+        "filmmakers-button": "Filmmakers",
         "search-button": "Search",
         "language-button": "Language",
         "daily-article-header": "Daily Article",
@@ -22,7 +22,7 @@
         "dev-team-header": "Our great team"
         
     },
-    "bel": {
+    "by": {
         "search-label": "Пошук:",
         "home-button": "Галоўная",
         "filmmakers-button": "Рэжысёры",

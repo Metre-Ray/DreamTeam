@@ -17,7 +17,7 @@ class AuthorPage extends React.Component {
     return [
       <Header/>,
       <Main>
-        <section class='container'>
+        <section className='container'>
           <Author name={this.props.name}/>
         </section>
       </Main>,

@@ -10,6 +10,7 @@ class Header extends React.Component {
             <header>
                 <div className="container">
                     <div className="logo">Team35</div>
+                    <h1>Belarusian filmmakers</h1>
                     <a href="./search.html" className="search">{UIText[lang]['search-button']}</a>
                 </div>
             </header>
