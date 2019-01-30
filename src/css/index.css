@@ -71,6 +71,10 @@ header .submenu li {
     cursor: pointer;
 }
 
+header .submenu li:hover {
+    color: rgb(255, 202, 202);
+}
+
 .logo{
     margin-left: 5px;
     font-family: "AngryBirds", Arial;
@@ -134,12 +138,17 @@ nav li a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .filmmaker-info{   
     width: 50%;
     height: fit-content;
     border-right: 2px dashed gray;
+    padding: 5px;
+}
+
+.filmmaker-img {
     padding: 5px;
 }
 
