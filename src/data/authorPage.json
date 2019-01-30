@@ -1,0 +1,20 @@
+{
+    "rus": {
+        "list_movies": "Список фильмов: ",
+        "gallery": "Фотогалерея",
+        "watch_video": "Посмотреть видео о режиссёре",
+        "place_of_working": "Место работы режиссёра:"
+    },
+    "eng": {
+        "list_movies": "List of movies: ",
+        "gallery": "Photogallery",
+        "watch_video": "Watch video about filmmaker",
+        "place_of_working": "Place of working:"
+    },
+    "by": {
+        "list_movies": "Cпіс фільмаў: ",
+        "gallery": "Фотагалерэя",
+        "watch_video": "Паглядзець відэа пра рэжысёра",
+        "place_of_working": "Месца працы рэжысёра:"
+    }
+}
