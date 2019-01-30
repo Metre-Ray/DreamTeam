@@ -31,13 +31,13 @@ export default class OverlayVideo extends React.Component {
             return (
                 <Fragment>
                     {modal}
-                    <div onClick={this.openModal} className="video-button">Watch video about filmmaker</div>
+                    <div onClick={this.openModal} className="video-button">{this.props.text}</div>
                 </Fragment>
             );
         else
             return (
                 <Fragment>
-                    <div onClick={this.openModal} className="video-button">Watch video about filmmaker</div>
+                    <div onClick={this.openModal} className="video-button">{this.props.text}</div>
                 </Fragment>
             )
     }

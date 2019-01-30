@@ -1,5 +1,10 @@
+body {
+    /* overflow: scroll; */
+}
+
 section {
     font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
     margin-bottom: 40px;
 }
 

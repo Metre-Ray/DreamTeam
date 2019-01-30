@@ -1,6 +1,5 @@
-
-function changeLanguage() {
-    const but = document.querySelector('li.chooseLang');
+export default function changeLanguage() {
+    const but = document.querySelector('.chooseLang');
     but.addEventListener('click', (event) => {
         if (event.target.id === 'rus') sessionStorage.setItem('language', 'rus');
         else if (event.target.id === 'eng') sessionStorage.setItem('language', 'eng');
@@ -8,5 +7,3 @@ function changeLanguage() {
         location.reload();
     });
 }
-
-changeLanguage();

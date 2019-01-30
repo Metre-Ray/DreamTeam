@@ -14,14 +14,14 @@ class Authors extends React.Component {
       let authorObj = {
         name: authorsData[lang][key].name,
         photo: authorsData[lang][key].photo,
-        listOfMovies: authorsData[lang][key].list_of_movies.join(' '),
+        listOfMovies: authorsData[lang][key].list_of_movies.join(', '),
       }
 
       authors.push(authorObj);
     }
 
     authorsElems = authors.map((item, index) => {
-      return <AuthorDescription name={item.name} photo={item.photo} listOfMovies={item.listOfMovies}/>
+      return <AuthorDescription name={item.name} photo={item.photo} listOfMovies={item.listOfMovies} key={index} />
     });
 
     return (

@@ -4,6 +4,12 @@
     }
 }
 
+@media (max-width: 360px) {
+    header .logo{
+        display: none;
+    }
+}
+
 @font-face {
     font-family: 'AngryBirds';
     src: url('../data/ABfont.otf');
@@ -11,11 +17,12 @@
     font-style: normal;
 }
 
+
 body{
     margin: 0;
     padding: 0;
-    background: rgb(250, 250, 250);
-    font-family: Lato;
+    overflow: scroll;
+    /* font-family: Lato; */
 }
 
 .container{
@@ -26,15 +33,14 @@ body{
 
 h1{
     margin: 10px;
-    /* color: white; */
 }
 
 header{
+    height: 70px;
+    background: rgb(0, 0, 0);
+    border-bottom: 2px solid white;
     font-weight: bold;
     font-size: 16px;
-    background: rgb(0, 0, 0);
-    height: 70px;
-    border-bottom: 2px solid white;
     color: white;
 }
 
@@ -49,10 +55,25 @@ header .container{
     align-items: center;
 }
 
+header .search{
+    margin-right: 5px;
+}
+
+header .submenu{
+    padding: 0;
+    margin: 0 5px;
+    /* position: absolute; */
+    list-style: none;
+    border: 1px solid black;
+}
+
+header .submenu li {
+    cursor: pointer;
+}
+
 .logo{
     margin-left: 5px;
     font-family: "AngryBirds", Arial;
-    /* font-family: Arial; */
     font-size: 1.5rem;
     font-weight: normal;
     color: white;
@@ -94,24 +115,8 @@ nav li a:hover {
     transition: all 0.2s;
 }
 
-nav .submenu{
-    /* display: inline; */
-    margin: 0;
-    padding: 0;
-    margin-left: 5px;
-    /* position: absolute; */
-    list-style: none;
-    border: 1px solid black;
-}
-
-nav .submenu li {
-    margin-right: 5px;
-    cursor: pointer;
-}
-
 
 .daily-article{
-    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,7 +125,6 @@ nav .submenu li {
 .daily-article article{
     margin: 5%;
     width: 100%;
-    height: 80%;
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
@@ -130,19 +134,14 @@ nav .submenu li {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 50%;
 }
-
 
 .filmmaker-info{   
     width: 50%;
+    height: fit-content;
     border-right: 2px dashed gray;
+    padding: 5px;
 }
-
-#filmmaker-name{
-    font-size: 30px;
-}
-
 
 .filmmaker-img img{
     border: 3px solid white;
@@ -170,20 +169,20 @@ nav .submenu li {
 }
 
 .cross:before, .cross:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 2px;
-  background-color: #333;
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
 }
 
 .cross:before {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .cross:after {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .dev-team{
@@ -216,7 +215,6 @@ nav .submenu li {
     transform: scale(1.1);
     z-index: 10;
     transition: all 0.2s;
-    
 }
 
 .team-block:active{
@@ -231,15 +229,16 @@ nav .submenu li {
 }
 
 .rss-logo{
-    height: 60px;
-    width: auto;   
+    height: 50px;
+    width: auto;  
+    margin-right: 5px; 
 }
 
 footer{
-    height: 100px;
+    height: 80px;
     border-top: 2px solid white;
-    background: #424242;
-    color: #e5e5e5;
+    background: #2b2b2b;
+    color: #ffffff;
 }
 
 footer .container{
@@ -252,6 +251,5 @@ footer .container{
 
 footer .footer-text{
     font-size: 10px;
-    color: white;
     align-self: flex-end;
 }

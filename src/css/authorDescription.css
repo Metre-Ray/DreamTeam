@@ -1,0 +1,11 @@
+.author {
+    margin: 50px 5px;
+}
+
+.author__name {
+    font-weight: bold;
+}
+
+.author img {
+    max-height: 300px;
+}

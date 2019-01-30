@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/authorDescription.css'
 
 class AuthorDescription extends React.Component {
   constructor(props) {
@@ -10,11 +11,11 @@ class AuthorDescription extends React.Component {
 
   render() {
     return(
-      <section className='author'>
-        <img src={this.props.photo} alt={this.props.name}/>
+      <article className='author' key={this.props.key}>
+        <img src={`../../img/${this.props.photo}`} alt={this.props.name}/>
         <p className='author__name'>{this.props.name}</p>
-        <p className='author__movies'>{this.props.listOfMovies}</p>
-      </section>
+        <p className='author__movies'>Movies: {this.props.listOfMovies}</p>
+      </article>
     );
   }
 }
