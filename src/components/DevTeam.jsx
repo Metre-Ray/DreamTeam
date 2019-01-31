@@ -6,7 +6,7 @@ const UIText = require('../data/user-interface.json');
 
 class DevTeam extends React.Component {
     render() {
-        const lang = sessionStorage.getItem("language") || "rus";;
+        let lang = 'rus';
 
         return(
             <section className="dev-team">

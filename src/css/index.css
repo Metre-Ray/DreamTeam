@@ -1,11 +1,11 @@
 @media screen and (max-width: 1100px) {
-    .cross {
+    .cross{
         display: none;
     }
 }
 
 @media (max-width: 360px) {
-    header .logo {
+    header .logo{
         display: none;
     }
 }
@@ -18,27 +18,24 @@
 }
 
 
-body {
+body{
     margin: 0;
     padding: 0;
     overflow: scroll;
+    /* font-family: Lato; */
 }
 
-section {
-    margin: 5px;
-}
-
-h1 {
-    margin: 10px;
-}
-
-.container {
+.container{
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     height: 100%;
 }
 
-header {
+h1{
+    margin: 10px;
+}
+
+header{
     height: 70px;
     background: rgb(0, 0, 0);
     border-bottom: 2px solid white;
@@ -47,24 +44,25 @@ header {
     color: white;
 }
 
-header a {
+header a{
     color: white;
 }
 
-header .container {
+header .container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-header .search {
+header .search{
     margin-right: 5px;
 }
 
-header .submenu {
+header .submenu{
     padding: 0;
     margin: 0 5px;
+    /* position: absolute; */
     list-style: none;
     border: 1px solid black;
 }
@@ -77,7 +75,7 @@ header .submenu li:hover {
     color: rgb(255, 202, 202);
 }
 
-.logo {
+.logo{
     margin-left: 5px;
     font-family: "AngryBirds", Arial;
     font-size: 1.5rem;
@@ -107,7 +105,7 @@ nav li a {
     color: black;
     font-weight: bold;
     font-size: 20px;
-    /* height: 50px; */
+    height: 50px;
     text-decoration: none;
     height: inherit;
     padding: 0 25px;
@@ -122,66 +120,54 @@ nav li a:hover {
 }
 
 
-.daily-article {
+.daily-article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
 }
 
-.daily-article article {
+.daily-article article{
     margin: 5%;
-    margin-top: 0;
     width: 100%;
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
-    background-color: beige;
 }
 
-.filmmaker-main {
+.filmmaker-main{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     align-items: center;
-    padding: 5px;
 }
 
 .filmmaker-info{   
     width: 50%;
     height: fit-content;
-    border-right: 2px dashed brown;
-    padding: 10px;
-}
-
-.filmmaker-info h3 {
-    text-shadow: 0 2px 2px coral;
+    border-right: 2px dashed gray;
+    padding: 5px;
 }
 
 .filmmaker-img {
-    margin: 0 auto;
     padding: 5px;
-    /* margin: 5px; */
 }
 
-.filmmaker-img img {
-    max-height: 300px;
-    max-width: 100%;
+.filmmaker-img img{
     border: 3px solid white;
     border-radius: 2px;
-    box-shadow: 0 0 10px red;
 }
 
 .filmmaker-history{
-    border-top: 2px dashed brown;
+    border-top: 2px dashed gray;
 }
 
 .about-portal{
+    border-top: 2px solid red;
     height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 2px solid red;
+    
 }
 
 .cross{

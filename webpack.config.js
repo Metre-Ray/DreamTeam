@@ -13,7 +13,8 @@ module.exports = {
     turov: './src/js/turov.js',
     searchLogic: './src/js/search.js',
     searchPage: './src/js/searchPage.js',
-    authorsPage: './src/js/authorsPage.js'
+    authorsPage: './src/js/authorsPage.js',
+    changeLanguage: './src/js/changeLanguage.js'
   },
   output: {
     filename: 'js/[name].js',

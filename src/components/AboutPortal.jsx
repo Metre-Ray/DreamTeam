@@ -4,7 +4,7 @@ const UIText = require('../data/user-interface.json');
 
 class AboutPortal extends React.Component {
     render() {
-        const lang = sessionStorage.getItem("language") || "rus";;
+        let lang = 'rus';
 
         return (
             <section className="about-portal">
