@@ -1,22 +1,22 @@
-let textPlaseholder = '';
+let textPlaceholder = '';
 let textButton = '';
 const submit = document.getElementById('submit');
 
 switch (sessionStorage.getItem('language')) {
     case "rus":
-        textPlaseholder = 'поиск';
+        textPlaceholder = 'поиск';
         textButton = 'ИСКАТЬ!';
         break;
     case "eng":
-        textPlaseholder = 'search';
+        textPlaceholder = 'search';
         textButton = 'SEARCH!';
         break;
     case "by":
-        textPlaseholder = 'пошук';        
+        textPlaceholder = 'пошук';        
         textButton = 'ШУКАЦЬ!';
         break;
     default:
-        textPlaseholder = 'поиск';
+        textPlaceholder = 'поиск';
         textButton = 'ИСКАТЬ!';
         break;
 } 
@@ -24,7 +24,7 @@ switch (sessionStorage.getItem('language')) {
 window.onload = function (){
     const el = document.querySelector('.input');
     const button = document.querySelector('.search');
-    el.placeholder=textPlaseholder;
+    el.placeholder = textPlaceholder;
     button.value = textButton;
     submit.click();
 };
@@ -40,7 +40,7 @@ function search() {
         if (this.readyState == 4 && this.status == 200) {
 
             const response = JSON.parse(xhttp.responseText);
-            const output = '';
+            let output = '';
             const lang = sessionStorage.getItem('language');
 
             if(lang == undefined) {
@@ -52,11 +52,11 @@ function search() {
             const matchs = [];
 
             for(key in obj){
-                if((key.search(myExp) !== -1) || (obj[key].place_of_working.search(myExp) !== -1)){
+                if((key.search(myExp) !== -1) || (obj[key].place_of_working.search(myExp) !== -1)){ //поиск по месту работы и имени
                     matchs.push(key);
                 }
             }
-            matchs.forEach((el)=>{output +='<li><a href=\'https://metre-ray.github.io/DreamTeam/html/authors/'+ el +'.html\'>'+ obj[el].name +'</a></li>'}); 
+            matchs.forEach((el)=>{output += '<li><a href=\'./authors/' + el +'.html\'>'+ obj[el].name +'</a></li>'}); 
             
             if(matchs.length === 0){
                 switch (lang) {
@@ -74,7 +74,7 @@ function search() {
                         break;
                 } 
             }
-            document.querySelector("ul").innerHTML = output;        
+            document.querySelector(".answer ul").innerHTML = output;        
         }
     };
     xhttp.open("GET", "../data/filmmakers.json", true);

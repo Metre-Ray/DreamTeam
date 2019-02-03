@@ -9,8 +9,8 @@ export default class Map extends React.Component {
         this.makeMap();
     }
 
-    async makeMap(place = 'Minsk, Belarus') {
-        place = this.props.place;
+    async makeMap() {
+        const place = this.props.place || 'Minsk, Belarus';
         const provider = new OpenStreetMapProvider();
         const coords = await provider.search({ query: place });
         const mymap = L.map('mapid').setView([coords[0].y, coords[0].x], 6);

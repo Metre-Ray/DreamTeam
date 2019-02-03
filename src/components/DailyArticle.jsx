@@ -10,7 +10,7 @@ class DailyArticle extends React.Component {
     }
 
     componentDidMount() { 
-        const article = getRandomArticle();
+        const [article, key] = getRandomArticle();
         const keys = Object.keys(article.biography).sort();
         const bio1 = article.biography[keys[0]];
         const bio = keys.reduce((prev, date, ind) => {
@@ -21,7 +21,8 @@ class DailyArticle extends React.Component {
             name: article.name, 
             bio,
             bio1,
-            img: article.photo
+            img: article.photo,
+            key
         });
     }
 
@@ -34,7 +35,7 @@ class DailyArticle extends React.Component {
                 <article>
                     <div className="filmmaker-main">
                         <div className="filmmaker-info">
-                            <h3>{this.state.name}</h3>    
+                            <h3><a href={`./authors/${this.state.key}.html`}>{this.state.name}</a></h3>    
                             <p>
                                 {this.state.bio1}
                             </p>    

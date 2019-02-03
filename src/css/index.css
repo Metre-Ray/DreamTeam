@@ -139,6 +139,11 @@ nav li a:hover {
     background-color: beige;
 }
 
+.daily-article a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .filmmaker-main {
     display: flex;
     flex-direction: row;

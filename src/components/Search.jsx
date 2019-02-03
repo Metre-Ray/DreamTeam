@@ -10,6 +10,7 @@ class Search extends React.Component {
               <input type="search" name="" placeholder='поиск' className="input"/>
               <input id="submit" type="submit" name="" value='ПОИСК!' className="search"/>
           </div>
+          <p>*search only in english</p>
           <div className="answer">
               <ul></ul>
           </div>

@@ -5,5 +5,5 @@ export default function getRandomArticle() {
     const keys = Object.keys(authorObject[lang]);
     const num = Math.floor(Math.random() * keys.length);
     const article = authorObject[lang][keys[num]];
-    return article;
+    return [article, keys[num]];
 }
