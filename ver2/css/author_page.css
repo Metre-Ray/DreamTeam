@@ -1,0 +1,90 @@
+section {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 40px;
+}
+
+.top {
+    text-align: center;
+}
+
+.top img {
+    max-height: 500px;
+}
+
+.list-movies ul {
+    list-style-type: none;
+}
+
+.list-movies ul li {
+    position: relative;
+    padding: .4em;
+}
+
+.list-movies ul li::before {
+    content: ' ';
+    position: absolute; 
+    height: 1em;
+    width: 1em;
+    left: -1.3em;
+    top: 0%;
+    border: .3em solid #fff;
+    border-radius: 2em;
+    background: #87ceeb;
+}
+
+.gallery {
+    max-width: 600px;
+    max-height: 600px;
+    margin: 40px auto;
+}
+
+.video {
+    margin: 50px auto;
+}
+
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding-top: 80px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content div {
+    margin: 0 auto;
+}
+
+.video-button {
+    width: 80%;
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(187, 214, 255);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.video-button:hover {
+    background-color: rgb(128, 172, 255);
+}
+
+
+/* .image-gallery-image {
+    height: 350px;
+    object-fit: contain;
+} */
+
+.gallery .image-gallery-slide img {
+    max-height: 350px;
+    /* width: auto; */
+}
+
+#mapid { 
+    height: 400px; 
+    z-index: 1;
+    margin: 0 auto;
+}
