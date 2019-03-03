@@ -52,7 +52,7 @@ function search() {
             const matchs = [];
 
             for(key in obj){
-                if((key.search(myExp) !== -1) || (obj[key].place_of_working.search(myExp) !== -1)){ //поиск по месту работы и имени
+                if((obj[key].name.split(' ')[1].search(myExp) !== -1) || (obj[key].place_of_working.search(myExp) !== -1)){ 
                     matchs.push(key);
                 }
             }
